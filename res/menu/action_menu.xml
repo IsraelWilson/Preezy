@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:preezy="http://schemas.android.com/apk/res-auto" >
+    
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:showAsAction="never" />
+    <!-- Actions -->
+    <item android:id="@+id/action1"
+          android:title="@string/action1"
+          android:icon="@drawable/ic_action_video"
+          android:showAsAction="ifRoom" />
+    <item android:id="@+id/action2"
+          android:title="@string/action2"
+          android:icon="@drawable/ic_action_mic"
+          android:showAsAction="ifRoom" />
+    <item android:id="@+id/action3"
+          android:title="@string/action3"
+          android:icon="@drawable/ic_action_play"
+          android:showAsAction="ifRoom" />
+    <item android:id="@+id/action4"
+          android:title="@string/action4"
+          android:icon="@drawable/ic_action_cloud"
+          android:showAsAction="ifRoom" />
+    <item android:id="@+id/action5"
+          android:title="@string/action5"
+          android:icon="@drawable/ic_action_good"
+          preezy:showAsAction="ifRoom" />
+    
+
+</menu>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@+id/flipper_my_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nav_my_profle"
+        android:layout_alignParentTop="true" >
+
+    </ViewFlipper>
+
+    <LinearLayout
+        android:id="@+id/nav_my_profle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageButton
+            android:id="@+id/button_notifications"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/buttonNotificationsDesc"
+            android:src="@drawable/ic_action_cloud" />
+
+        <ImageButton
+            android:id="@+id/button_event_feed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/buttonEventFeedDesc"
+            android:src="@drawable/ic_action_mic" />
+
+        <ImageButton
+            android:id="@+id/button_business_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/buttonBusinessCardDesc"
+            android:src="@drawable/ic_action_good" />
+    </LinearLayout>
+
+</RelativeLayout>
