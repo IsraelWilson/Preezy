@@ -1,15 +1,15 @@
 package com.tigersmouth.preezy;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 	public static Context appContext;
 	Fragment swapFragment;
 
@@ -20,13 +20,13 @@ public class MainActivity extends Activity {
 		appContext = getApplicationContext();
 		
 		//Hides the Title Bar and Home Icon
-		ActionBar actionBar = getActionBar();
+		ActionBar actionBar = getSupportActionBar();
 		//actionBar.setDisplayShowHomeEnabled(false);
 		//actionBar.setDisplayShowTitleEnabled(false);
 		
 		
 		GeneralPromotion initialFragment = new GeneralPromotion();
-		FragmentTransaction transaction = getFragmentManager().beginTransaction();
+		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 		transaction.add(R.id.fragment_container, initialFragment);
 		transaction.commit();
 		
@@ -76,61 +76,60 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle presses on the action bar items
-	    FragmentTransaction ft = getFragmentManager().beginTransaction();
+	    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		
-		//Get the fragment that should replace the previous fragment
-	    switch (item.getItemId()) {
-	        case R.id.action1:
-	            //Switch Fragment here
-	        	swapFragment = new EventFeed();
-	    	    ft.replace(R.id.fragment_container, swapFragment );
-	        	ft.addToBackStack(null);
-	        	ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-	        	ft.commit();
-	            return true;
-	        case R.id.action2:
-	        	//Switch Fragment here
-	        	swapFragment = new MyProfile();
-	    	    ft.replace(R.id.fragment_container, swapFragment );
-	        	ft.addToBackStack(null);
-	        	ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-	        	ft.commit();
-	            return true;
-	        case R.id.action3:
-	        	//Switch Fragment here
-	        	swapFragment = new GeneralPromotion();
-	    	    ft.replace(R.id.fragment_container, swapFragment );
-	    	    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-	        	ft.addToBackStack(null);
-	        	ft.commit();
-	            return true;
-	        case R.id.action4:
-	        	//Switch Fragment here
-	        	swapFragment = new Notifications();
-	    	    ft.replace(R.id.fragment_container, swapFragment );
-	    	    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-	        	ft.addToBackStack(null);
-	        	ft.commit();
-	            return true;
-	        case R.id.action5:
-	        	//Switch Fragment here
-	        	swapFragment = new BusinessCard();
-	    	    ft.replace(R.id.fragment_container, swapFragment );
-	    	    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-	        	ft.addToBackStack(null);
-	        	ft.commit();
-	            return true;
-	        case R.id.action_settings:
-	            //Create a setting actions function
-	            return true;
-	        default:
-	            return super.onOptionsItemSelected(item);
-	    }
+		int itemId = item.getItemId();
+		if (itemId == R.id.action1) {
+			//Switch Fragment here
+			swapFragment = new EventFeed();
+			ft.replace(R.id.fragment_container, swapFragment );
+			ft.addToBackStack(null);
+			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			ft.commit();
+			return true;
+		} else if (itemId == R.id.action2) {
+			//Switch Fragment here
+			swapFragment = new MyProfile();
+			ft.replace(R.id.fragment_container, swapFragment );
+			ft.addToBackStack(null);
+			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			ft.commit();
+			return true;
+		} else if (itemId == R.id.action3) {
+			//Switch Fragment here
+			swapFragment = new GeneralPromotion();
+			ft.replace(R.id.fragment_container, swapFragment );
+			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			ft.addToBackStack(null);
+			ft.commit();
+			return true;
+		} else if (itemId == R.id.action4) {
+			//Switch Fragment here
+			swapFragment = new Notifications();
+			ft.replace(R.id.fragment_container, swapFragment );
+			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			ft.addToBackStack(null);
+			ft.commit();
+			return true;
+		} else if (itemId == R.id.action5) {
+			//Switch Fragment here
+			swapFragment = new BusinessCard();
+			ft.replace(R.id.fragment_container, swapFragment );
+			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			ft.addToBackStack(null);
+			ft.commit();
+			return true;
+		} else if (itemId == R.id.action_settings) {
+			//Create a setting actions function
+			return true;
+		} else {
+			return super.onOptionsItemSelected(item);
+		}
 	}
 	
 	@Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("tab", getActionBar().getSelectedNavigationIndex());
+        outState.putInt("tab", getSupportActionBar().getSelectedNavigationIndex());
     }
 }
