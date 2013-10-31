@@ -231,19 +231,11 @@ int drawable ic_action_mic 0x7f020059
 int drawable ic_action_play 0x7f02005a
 int drawable ic_action_video 0x7f02005b
 int drawable ic_launcher 0x7f02005c
-<<<<<<< HEAD
 int id action1 0x7f05004d
 int id action2 0x7f05004e
 int id action3 0x7f05004f
 int id action4 0x7f050050
 int id action5 0x7f050051
-=======
-int id action1 0x7f050049
-int id action2 0x7f05004a
-int id action3 0x7f05004b
-int id action4 0x7f05004c
-int id action5 0x7f05004d
->>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
 int id action_bar 0x7f05001a
 int id action_bar_activity_content 0x7f050015
 int id action_bar_container 0x7f050019
@@ -257,7 +249,6 @@ int id action_menu_presenter 0x7f050017
 int id action_mode_bar 0x7f05002f
 int id action_mode_bar_stub 0x7f05002e
 int id action_mode_close_button 0x7f050022
-<<<<<<< HEAD
 int id action_settings 0x7f05004c
 int id activity_chooser_view_content 0x7f050023
 int id always 0x7f05000b
@@ -265,12 +256,6 @@ int id beginning 0x7f050011
 int id button_business_card 0x7f05004a
 int id button_event_feed 0x7f050049
 int id button_notifications 0x7f050048
-=======
-int id action_settings 0x7f050048
-int id activity_chooser_view_content 0x7f050023
-int id always 0x7f05000b
-int id beginning 0x7f050011
->>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
 int id checkbox 0x7f05002b
 int id collapseActionView 0x7f05000d
 int id default_activity_button 0x7f050026
@@ -281,10 +266,7 @@ int id edit_query 0x7f050036
 int id end 0x7f050013
 int id expand_activities_button 0x7f050024
 int id expanded_menu 0x7f05002a
-<<<<<<< HEAD
 int id flipper_my_profile 0x7f050046
-=======
->>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
 int id fragment_container 0x7f050045
 int id home 0x7f050014
 int id homeAsUp 0x7f050005
@@ -295,10 +277,7 @@ int id left_icon 0x7f050031
 int id listMode 0x7f050001
 int id list_item 0x7f050027
 int id middle 0x7f050012
-<<<<<<< HEAD
 int id nav_my_profle 0x7f050047
-=======
->>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
 int id never 0x7f050009
 int id none 0x7f050010
 int id normal 0x7f050000
@@ -324,12 +303,7 @@ int id showTitle 0x7f050006
 int id split_action_bar 0x7f05001c
 int id submit_area 0x7f05003f
 int id tabMode 0x7f050002
-<<<<<<< HEAD
 int id textView1 0x7f05004b
-=======
-int id textView1 0x7f050047
-int id textView2 0x7f050046
->>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
 int id textView3 0x7f050042
 int id textView4 0x7f050043
 int id textView5 0x7f050044
@@ -393,12 +367,9 @@ int string action4 0x7f0a0017
 int string action5 0x7f0a0018
 int string action_settings 0x7f0a0013
 int string app_name 0x7f0a000d
-<<<<<<< HEAD
 int string buttonBusinessCardDesc 0x7f0a001b
 int string buttonEventFeedDesc 0x7f0a001a
 int string buttonNotificationsDesc 0x7f0a0019
-=======
->>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
 int string label_business_card 0x7f0a0011
 int string label_event_feed 0x7f0a000f
 int string label_general_promotion 0x7f0a000e
