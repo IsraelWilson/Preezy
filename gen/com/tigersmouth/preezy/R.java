@@ -984,11 +984,19 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02005c;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int action1=0x7f05004d;
         public static final int action2=0x7f05004e;
         public static final int action3=0x7f05004f;
         public static final int action4=0x7f050050;
         public static final int action5=0x7f050051;
+=======
+        public static final int action1=0x7f050049;
+        public static final int action2=0x7f05004a;
+        public static final int action3=0x7f05004b;
+        public static final int action4=0x7f05004c;
+        public static final int action5=0x7f05004d;
+>>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
         public static final int action_bar=0x7f05001a;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f050019;
@@ -1002,6 +1010,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f05002f;
         public static final int action_mode_bar_stub=0x7f05002e;
         public static final int action_mode_close_button=0x7f050022;
+<<<<<<< HEAD
         public static final int action_settings=0x7f05004c;
         public static final int activity_chooser_view_content=0x7f050023;
         public static final int always=0x7f05000b;
@@ -1009,6 +1018,12 @@ containing a value of this type.
         public static final int button_business_card=0x7f05004a;
         public static final int button_event_feed=0x7f050049;
         public static final int button_notifications=0x7f050048;
+=======
+        public static final int action_settings=0x7f050048;
+        public static final int activity_chooser_view_content=0x7f050023;
+        public static final int always=0x7f05000b;
+        public static final int beginning=0x7f050011;
+>>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
         public static final int checkbox=0x7f05002b;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f050026;
@@ -1019,7 +1034,10 @@ containing a value of this type.
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050024;
         public static final int expanded_menu=0x7f05002a;
+<<<<<<< HEAD
         public static final int flipper_my_profile=0x7f050046;
+=======
+>>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
         public static final int fragment_container=0x7f050045;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
@@ -1030,7 +1048,10 @@ containing a value of this type.
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050027;
         public static final int middle=0x7f050012;
+<<<<<<< HEAD
         public static final int nav_my_profle=0x7f050047;
+=======
+>>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
@@ -1056,7 +1077,12 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001c;
         public static final int submit_area=0x7f05003f;
         public static final int tabMode=0x7f050002;
+<<<<<<< HEAD
         public static final int textView1=0x7f05004b;
+=======
+        public static final int textView1=0x7f050047;
+        public static final int textView2=0x7f050046;
+>>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
         public static final int textView3=0x7f050042;
         public static final int textView4=0x7f050043;
         public static final int textView5=0x7f050044;
@@ -1177,9 +1203,12 @@ containing a value of this type.
         public static final int action5=0x7f0a0018;
         public static final int action_settings=0x7f0a0013;
         public static final int app_name=0x7f0a000d;
+<<<<<<< HEAD
         public static final int buttonBusinessCardDesc=0x7f0a001b;
         public static final int buttonEventFeedDesc=0x7f0a001a;
         public static final int buttonNotificationsDesc=0x7f0a0019;
+=======
+>>>>>>> 8b6bf1f56a759a68d059d33844c73f410f594673
         public static final int label_business_card=0x7f0a0011;
         public static final int label_event_feed=0x7f0a000f;
         public static final int label_general_promotion=0x7f0a000e;
