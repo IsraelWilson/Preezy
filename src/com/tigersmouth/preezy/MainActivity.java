@@ -1,9 +1,9 @@
 package com.tigersmouth.preezy;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -19,10 +19,10 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 		appContext = getApplicationContext();
 		
+		
+		
 		//Hides the Title Bar and Home Icon
 		ActionBar actionBar = getSupportActionBar();
-		//actionBar.setDisplayShowHomeEnabled(false);
-		//actionBar.setDisplayShowTitleEnabled(false);
 		
 		
 		GeneralPromotion initialFragment = new GeneralPromotion();
@@ -35,32 +35,17 @@ public class MainActivity extends ActionBarActivity {
 		//Android Developers does this differently. Might consider doing a cleaner revision	    
 	    ActionBar.Tab generalPromotionTab = actionBar.newTab().setText(R.string.label_general_promotion)
 	    		.setIcon(R.drawable.ic_action_mic);
-	    ActionBar.Tab eventFeedTab = actionBar.newTab().setText(R.string.label_event_feed)
-	    		.setIcon(R.drawable.ic_action_play);
 	    ActionBar.Tab myProfileTab = actionBar.newTab().setText(R.string.label_my_profile)
 	    		.setIcon(R.drawable.ic_action_video);
-	    ActionBar.Tab notificationsTab = actionBar.newTab().setText(R.string.label_notifications)
-	    		.setIcon(R.drawable.ic_action_cloud);
-	    ActionBar.Tab businessCardTab = actionBar.newTab().setText(R.string.label_business_card)
-	    		.setIcon(R.drawable.ic_action_good);
 	    
 	    Fragment generalPromotionFragment = new GeneralPromotion();
-	    Fragment eventFeedFragment = new EventFeed();
 	    Fragment myProfileFragment = new MyProfile();
-	    Fragment notificationsFragment = new Notifications();
-	    Fragment businessCardFragment = new BusinessCard();
 	    
 	    generalPromotionTab.setTabListener(new MyTabsListener(generalPromotionFragment));
-	    eventFeedTab.setTabListener(new MyTabsListener(eventFeedFragment));
 	    myProfileTab.setTabListener(new MyTabsListener(myProfileFragment));
-	    notificationsTab.setTabListener(new MyTabsListener( notificationsFragment));
-	    businessCardTab.setTabListener(new MyTabsListener(businessCardFragment));
 	    
 	    actionBar.addTab(generalPromotionTab);
-	    actionBar.addTab(eventFeedTab);
 	    actionBar.addTab(myProfileTab);
-	    actionBar.addTab(notificationsTab);
-	    actionBar.addTab(businessCardTab);
 	    actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 	}
 	
@@ -81,7 +66,7 @@ public class MainActivity extends ActionBarActivity {
 		int itemId = item.getItemId();
 		if (itemId == R.id.action1) {
 			//Switch Fragment here
-			swapFragment = new EventFeed();
+			swapFragment = new MyProfile();
 			ft.replace(R.id.fragment_container, swapFragment );
 			ft.addToBackStack(null);
 			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
@@ -89,31 +74,7 @@ public class MainActivity extends ActionBarActivity {
 			return true;
 		} else if (itemId == R.id.action2) {
 			//Switch Fragment here
-			swapFragment = new MyProfile();
-			ft.replace(R.id.fragment_container, swapFragment );
-			ft.addToBackStack(null);
-			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-			ft.commit();
-			return true;
-		} else if (itemId == R.id.action3) {
-			//Switch Fragment here
 			swapFragment = new GeneralPromotion();
-			ft.replace(R.id.fragment_container, swapFragment );
-			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-			ft.addToBackStack(null);
-			ft.commit();
-			return true;
-		} else if (itemId == R.id.action4) {
-			//Switch Fragment here
-			swapFragment = new Notifications();
-			ft.replace(R.id.fragment_container, swapFragment );
-			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-			ft.addToBackStack(null);
-			ft.commit();
-			return true;
-		} else if (itemId == R.id.action5) {
-			//Switch Fragment here
-			swapFragment = new BusinessCard();
 			ft.replace(R.id.fragment_container, swapFragment );
 			ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 			ft.addToBackStack(null);
@@ -131,5 +92,5 @@ public class MainActivity extends ActionBarActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("tab", getSupportActionBar().getSelectedNavigationIndex());
-    }
+    }	
 }
